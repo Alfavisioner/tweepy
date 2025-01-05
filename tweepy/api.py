@@ -4,7 +4,7 @@
 
 import contextlib
 import functools
-import imghdr
+import filetype
 import logging
 import mimetypes
 from platform import python_version
@@ -3473,7 +3473,7 @@ class API:
             location = file.tell()
             h = file.read(32)
             file.seek(location)
-        file_type = imghdr.what(filename, h=h)
+        file_type = filetype.guess(filename).extension
         if file_type is not None:
             file_type = 'image/' + file_type
         else:
