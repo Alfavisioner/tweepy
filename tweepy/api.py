@@ -298,7 +298,7 @@ class API:
     @pagination(mode='id')
     @payload('status', list=True)
     def home_timeline(self, **kwargs):
-        """home_timeline(*, count, since_id, max_id, trim_user, \
+        """home_timeline(*, count, since_id, max_id, trim_user,
                          exclude_replies, include_entities)
 
         Returns the 20 most recent statuses, including retweets, posted by
@@ -338,7 +338,7 @@ class API:
     @pagination(mode='id')
     @payload('status', list=True)
     def mentions_timeline(self, **kwargs):
-        """mentions_timeline(*, count, since_id, max_id, trim_user, \
+        """mentions_timeline(*, count, since_id, max_id, trim_user,
                              include_entities)
 
         Returns the 20 most recent mentions, including retweets.
@@ -373,7 +373,7 @@ class API:
     @pagination(mode='id')
     @payload('status', list=True)
     def user_timeline(self, **kwargs):
-        """user_timeline(*, user_id, screen_name, since_id, count, max_id, \
+        """user_timeline(*, user_id, screen_name, since_id, count, max_id,
                          trim_user, exclude_replies, include_rts)
 
         Returns the 20 most recent statuses posted from the authenticating user
@@ -423,7 +423,7 @@ class API:
     @pagination(mode='id')
     @payload('status', list=True)
     def get_favorites(self, **kwargs):
-        """get_favorites(*, user_id, screen_name, count, since_id, max_id, \
+        """get_favorites(*, user_id, screen_name, count, since_id, max_id,
                          include_entities)
 
         Returns the favorite statuses for the authenticating user or user
@@ -464,7 +464,7 @@ class API:
 
     @payload('status', list=True)
     def lookup_statuses(self, id, **kwargs):
-        """lookup_statuses(id, *, include_entities, trim_user, map, \
+        """lookup_statuses(id, *, include_entities, trim_user, map,
                            include_ext_alt_text, include_card_uri)
 
         Returns full Tweet objects for up to 100 Tweets per request, specified
@@ -516,9 +516,9 @@ class API:
 
     @payload('json')
     def get_oembed(self, url, **kwargs):
-        """get_oembed( \
-            url, *, maxwidth, hide_media, hide_thread, omit_script, align, \
-            related, lang, theme, link_color, widget_type, dnt \
+        """get_oembed(
+            url, *, maxwidth, hide_media, hide_thread, omit_script, align,
+            related, lang, theme, link_color, widget_type, dnt
         )
 
         Returns a single Tweet, specified by either a Tweet web URL or the
@@ -674,7 +674,7 @@ class API:
     @pagination(mode='id')
     @payload('status', list=True)
     def get_retweets_of_me(self, **kwargs):
-        """get_retweets_of_me(*, count, since_id, max_id, trim_user, \
+        """get_retweets_of_me(*, count, since_id, max_id, trim_user,
                               include_entities, include_user_entities)
 
         Returns the 20 most recent Tweets of the authenticated user that have
@@ -715,7 +715,7 @@ class API:
 
     @payload('status')
     def get_status(self, id, **kwargs):
-        """get_status(id, *, trim_user, include_my_retweet, include_entities, \
+        """get_status(id, *, trim_user, include_my_retweet, include_entities,
                       include_ext_alt_text, include_card_uri)
 
         Returns a single status specified by the ID parameter.
@@ -932,11 +932,11 @@ class API:
 
     @payload('status')
     def update_status(self, status, **kwargs):
-        """update_status( \
-            status, *, in_reply_to_status_id, auto_populate_reply_metadata, \
-            exclude_reply_user_ids, attachment_url, media_ids, \
-            possibly_sensitive, lat, long, place_id, display_coordinates, \
-            trim_user, card_uri \
+        """update_status(
+            status, *, in_reply_to_status_id, auto_populate_reply_metadata,
+            exclude_reply_user_ids, attachment_url, media_ids,
+            possibly_sensitive, lat, long, place_id, display_coordinates,
+            trim_user, card_uri
         )
 
         Updates the authenticating user's current status, also known as
@@ -1047,9 +1047,9 @@ class API:
     @payload('status')
     def update_status_with_media(self, status, filename, *, file=None,
                                  **kwargs):
-        """update_status_with_media( \
-            status, filename, *, file, possibly_sensitive, \
-            in_reply_to_status_id, lat, long, place_id, display_coordinates \
+        """update_status_with_media(
+            status, filename, *, file, possibly_sensitive,
+            in_reply_to_status_id, lat, long, place_id, display_coordinates
         )
 
         Update the authenticated user's status. Statuses that are duplicates or
@@ -1118,7 +1118,7 @@ class API:
     @pagination(mode='id')
     @payload('search_results')
     def search_tweets(self, q, **kwargs):
-        """search_tweets(q, *, geocode, lang, locale, result_type, count, \
+        """search_tweets(q, *, geocode, lang, locale, result_type, count,
                          until, since_id, max_id, include_entities)
 
         Returns a collection of relevant Tweets matching a specified query.
@@ -1184,7 +1184,7 @@ class API:
             Specifies what type of search results you would prefer to receive.
             The current default is "mixed." Valid values include:
 
-            * mixed : include both popular and real time results in the \
+            * mixed : include both popular and real time results in the
                       response
             * recent : return only the most recent results in the response
             * popular : return only the most popular results in the response
@@ -1275,7 +1275,7 @@ class API:
     @pagination(mode='cursor')
     @payload('user', list=True)
     def get_list_members(self, **kwargs):
-        """get_list_members(*, list_id, slug, owner_screen_name, owner_id, \
+        """get_list_members(*, list_id, slug, owner_screen_name, owner_id,
                             count, cursor, include_entities, skip_status)
 
         Returns the members of the specified list.
@@ -1319,9 +1319,9 @@ class API:
 
     @payload('user')
     def get_list_member(self, **kwargs):
-        """get_list_member( \
-            *, list_id, slug, user_id, screen_name, owner_screen_name, \
-            owner_id, include_entities, skip_status \
+        """get_list_member(
+            *, list_id, slug, user_id, screen_name, owner_screen_name,
+            owner_id, include_entities, skip_status
         )
 
         Check if the specified user is a member of the specified list.
@@ -1372,7 +1372,7 @@ class API:
     @pagination(mode='cursor')
     @payload('list', list=True)
     def get_list_memberships(self, **kwargs):
-        """get_list_memberships(*, user_id, screen_name, count, cursor, \
+        """get_list_memberships(*, user_id, screen_name, count, cursor,
                                 filter_to_owned_lists)
 
         Returns the lists the specified user has been added to. If ``user_id``
@@ -1482,9 +1482,9 @@ class API:
     @pagination(mode='id')
     @payload('status', list=True)
     def list_timeline(self, **kwargs):
-        """list_timeline( \
-            *, list_id, slug, owner_screen_name, owner_id, since_id, max_id, \
-            count, include_entities, include_rts \
+        """list_timeline(
+            *, list_id, slug, owner_screen_name, owner_id, since_id, max_id,
+            count, include_entities, include_rts
         )
 
         Returns a timeline of Tweets authored by members of the specified list.
@@ -1533,9 +1533,9 @@ class API:
     @pagination(mode='cursor')
     @payload('user', list=True)
     def get_list_subscribers(self, **kwargs):
-        """get_list_subscribers( \
-            *, list_id, slug, owner_screen_name, owner_id, count, cursor, \
-            include_entities, skip_status \
+        """get_list_subscribers(
+            *, list_id, slug, owner_screen_name, owner_id, count, cursor,
+            include_entities, skip_status
         )
 
         Returns the subscribers of the specified list. Private list subscribers
@@ -1580,9 +1580,9 @@ class API:
 
     @payload('user')
     def get_list_subscriber(self, **kwargs):
-        """get_list_subscriber( \
-            *, owner_screen_name, owner_id, list_id, slug, user_id, \
-            screen_name, include_entities, skip_status \
+        """get_list_subscriber(
+            *, owner_screen_name, owner_id, list_id, slug, user_id,
+            screen_name, include_entities, skip_status
         )
 
         Check if the specified user is a subscriber of the specified list.
@@ -1729,7 +1729,7 @@ class API:
 
     @payload('list')
     def add_list_member(self, **kwargs):
-        """add_list_member(*, list_id, slug, user_id, screen_name, \
+        """add_list_member(*, list_id, slug, user_id, screen_name,
                            owner_screen_name, owner_id)
 
         Add a member to a list. The authenticated user must own the list to be
@@ -1767,7 +1767,7 @@ class API:
 
     @payload('list')
     def add_list_members(self, **kwargs):
-        """add_list_members(*, list_id, slug, user_id, screen_name, \
+        """add_list_members(*, list_id, slug, user_id, screen_name,
                             owner_screen_name, owner_id)
 
         Add up to 100 members to a list. The authenticated user must own the
@@ -1812,7 +1812,7 @@ class API:
 
     @payload('list')
     def remove_list_member(self, **kwargs):
-        """remove_list_member(*, list_id, slug, user_id, screen_name, \
+        """remove_list_member(*, list_id, slug, user_id, screen_name,
                               owner_screen_name, owner_id)
 
         Removes the specified member from the list. The authenticated user must
@@ -1850,7 +1850,7 @@ class API:
 
     @payload('list')
     def remove_list_members(self, **kwargs):
-        """remove_list_members(*, list_id, slug, user_id, screen_name, \
+        """remove_list_members(*, list_id, slug, user_id, screen_name,
                                owner_screen_name, owner_id)
 
         Remove up to 100 members from a list. The authenticated user must own
@@ -1957,7 +1957,7 @@ class API:
 
     @payload('list')
     def update_list(self, **kwargs):
-        """update_list(*, list_id, slug, name, mode, description, \
+        """update_list(*, list_id, slug, name, mode, description,
                        owner_screen_name, owner_id)
 
         Updates the specified list.
@@ -2000,7 +2000,7 @@ class API:
     @pagination(mode='cursor')
     @payload('ids')
     def get_follower_ids(self, **kwargs):
-        """get_follower_ids(*, user_id, screen_name, cursor, stringify_ids, \
+        """get_follower_ids(*, user_id, screen_name, cursor, stringify_ids,
                             count)
 
         Returns an array containing the IDs of users following the specified
@@ -2039,7 +2039,7 @@ class API:
     @pagination(mode='cursor')
     @payload('user', list=True)
     def get_followers(self, **kwargs):
-        """get_followers(*, user_id, screen_name, cursor, count, skip_status, \
+        """get_followers(*, user_id, screen_name, cursor, count, skip_status,
                          include_user_entities)
 
         Returns a user's followers ordered in which they were added. If no user
@@ -2081,7 +2081,7 @@ class API:
     @pagination(mode='cursor')
     @payload('ids')
     def get_friend_ids(self, **kwargs):
-        """get_friend_ids(*, user_id, screen_name, cursor, stringify_ids, \
+        """get_friend_ids(*, user_id, screen_name, cursor, stringify_ids,
                           count)
 
         Returns an array containing the IDs of users being followed by the
@@ -2120,7 +2120,7 @@ class API:
     @pagination(mode='cursor')
     @payload('user', list=True)
     def get_friends(self, **kwargs):
-        """get_friends(*, user_id, screen_name, cursor, count, skip_status, \
+        """get_friends(*, user_id, screen_name, cursor, count, skip_status,
                        include_user_entities)
 
         Returns a user's friends ordered in which they were added 100 at a
@@ -2280,7 +2280,7 @@ class API:
 
     @payload('friendship')
     def get_friendship(self, **kwargs):
-        """get_friendship(*, source_id, source_screen_name, target_id, \
+        """get_friendship(*, source_id, source_screen_name, target_id,
                           target_screen_name)
 
         Returns detailed information about the relationship between two users.
@@ -2322,14 +2322,14 @@ class API:
 
         There are a few things to note when using this method.
 
-        * You must be following a protected user to be able to see their most \
-            recent status update. If you don't follow a protected user their \
+        * You must be following a protected user to be able to see their most
+            recent status update. If you don't follow a protected user their
             status will be removed.
-        * The order of user IDs or screen names may not match the order of \
+        * The order of user IDs or screen names may not match the order of
             users in the returned array.
-        * If a requested user is unknown, suspended, or deleted, then that \
+        * If a requested user is unknown, suspended, or deleted, then that
             user will not be returned in the results list.
-        * If none of your lookup criteria can be satisfied by returning a \
+        * If none of your lookup criteria can be satisfied by returning a
             user object, a HTTP 404 will be thrown.
 
         Parameters
@@ -2667,7 +2667,7 @@ class API:
 
     @payload('json')
     def set_settings(self, **kwargs):
-        """set_settings(*, sleep_time_enabled, start_sleep_time, \
+        """set_settings(*, sleep_time_enabled, start_sleep_time,
                         end_sleep_time, time_zone, trend_location_woeid, lang)
 
         Updates the authenticating user's settings.
@@ -2721,7 +2721,7 @@ class API:
 
     @payload('user')
     def update_profile(self, **kwargs):
-        """update_profile(*, name, url, location, description, \
+        """update_profile(*, name, url, location, description,
                           profile_link_color, include_entities, skip_status)
 
         Sets values that users are able to set under the "Account" tab of their
@@ -2765,7 +2765,7 @@ class API:
         )
 
     def update_profile_banner(self, filename, *, file=None, **kwargs):
-        """update_profile_banner(filename, *, file, width, height, \
+        """update_profile_banner(filename, *, file, width, height,
                                  offset_left, offset_top)
 
         Uploads a profile banner on behalf of the authenticating user.
@@ -2810,7 +2810,7 @@ class API:
 
     @payload('user')
     def update_profile_image(self, filename, *, file=None, **kwargs):
-        """update_profile_image(filename, *, file, include_entities, \
+        """update_profile_image(filename, *, file, include_entities,
                                 skip_status)
 
         Update the authenticating user's profile image. Valid formats: GIF,
@@ -3060,7 +3060,7 @@ class API:
 
     @payload('user')
     def destroy_block(self, **kwargs):
-        """destroy_block(*, screen_name, user_id, include_entities, \
+        """destroy_block(*, screen_name, user_id, include_entities,
                          skip_status)
 
         Un-blocks the user specified in the ID parameter for the authenticating
@@ -3268,7 +3268,7 @@ class API:
         self, recipient_id, text, *, quick_reply_options=None,
         attachment_type=None, attachment_media_id=None, ctas=None, **kwargs
     ):
-        """send_direct_message(recipient_id, text, *, quick_reply_options, \
+        """send_direct_message(recipient_id, text, *, quick_reply_options,
                                attachment_type, attachment_media_id, ctas)
 
         Sends a new direct message to the specified user from the
@@ -3437,7 +3437,7 @@ class API:
 
     def media_upload(self, filename, *, file=None, chunked=False,
                      media_category=None, additional_owners=None, **kwargs):
-        """media_upload(filename, *, file, chunked, media_category, \
+        """media_upload(filename, *, file, chunked, media_category,
                         additional_owners)
 
         Use this to upload media to Twitter. This calls either
@@ -3538,9 +3538,9 @@ class API:
     def chunked_upload(self, filename, *, file=None, file_type=None,
                        wait_for_async_finalize=True, media_category=None,
                        additional_owners=None, **kwargs):
-        """chunked_upload( \
-            filename, *, file, file_type, wait_for_async_finalize, \
-            media_category, additional_owners \
+        """chunked_upload(
+            filename, *, file, file_type, wait_for_async_finalize,
+            media_category, additional_owners
         )
 
         Use this to upload media to Twitter. This uses the chunked upload
@@ -3685,7 +3685,7 @@ class API:
     def chunked_upload_init(self, total_bytes, media_type, *,
                             media_category=None, additional_owners=None,
                             **kwargs):
-        """chunked_upload_init(total_bytes, media_type, *, media_category, \
+        """chunked_upload_init(total_bytes, media_type, *, media_category,
                                additional_owners)
 
         Use this endpoint to initiate a chunked file upload session.
